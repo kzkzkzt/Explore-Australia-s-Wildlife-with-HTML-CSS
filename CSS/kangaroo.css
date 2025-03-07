@@ -1,0 +1,298 @@
+@font-face {
+  font-family: McLaren;
+  src: url("../fonts/McLaren/") format("truetype");
+}
+body {
+  min-height: 100vh;
+  background-image: url("../images/kangaroo/desert.jpeg");
+  padding: 0;
+  margin: 0;
+  background-size: cover;
+  font-family: "McLaren";
+  display: flex;
+  flex-direction: column;
+}
+/*Styles all the body elements*/
+
+.screenBorder {
+  position: absolute;
+  width: 98%;
+  top: 2%;
+  bottom: 2%;
+  left: 50%;
+  right: 50%;
+  transform: translate(-50%);
+}
+
+.textWave {
+  position: relative;
+  text-align: center;
+}
+/*Styles the kangaroo header span*/
+
+.textWave span {
+  font-family: "McLaren";
+  font-size: 80px;
+  color: rgb(229, 115, 27);
+  text-shadow: -1px 0 rgb(0, 0, 0), 0 1px rgb(21, 4, 4), 1px 0 rgb(199, 3, 3),
+    0 -1px black;
+  letter-spacing: 30px;
+  position: relative;
+  display: inline-block;
+  animation: wave 1.5s 10;
+  animation-delay: calc(0.1s * var(--i));
+}
+/*Styles the kangaroo header span*/
+
+@keyframes wave {
+  0%,
+  40%,
+  100% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(-45px);
+  }
+}
+/*Styles the kangaroo header span*/
+
+.kangarooJump {
+  position: fixed;
+  right: 80%;
+  top: 68%;
+  bottom: 200px;
+  transition: 0.5s;
+  animation-name: kangarooJump;
+  animation-duration: 50s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  display: flex;
+  justify-content: center;
+}
+@keyframes kangarooJump {
+  0% {
+    right: 99%;
+  }
+  80% {
+    transform: rotate(0);
+  }
+
+  90% {
+    transform: rotate(-10deg);
+  }
+
+  100% {
+    right: 0.9%;
+  }
+}
+/*Position gif kangaroo and makes the animation move forwards*/
+
+.redKangaroo {
+  position: fixed;
+  right: 80%;
+  top: 42%;
+  bottom: 200px;
+  animation: bounce 0.8s;
+  animation-direction: alternate;
+  animation-timing-function: cubic-bezier(0.5, 0.05, 1, 0.5);
+  animation-iteration-count: infinite;
+}
+
+@keyframes bounce {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(0, 200px, 0);
+  }
+}
+/*Position kangaroo and makes the animation bounce*/
+
+.kangarooSit {
+  position: fixed;
+  right: 17%;
+  top: 70%;
+  bottom: 200px;
+  display: flex;
+  z-index: 2;
+  justify-content: center;
+}
+/*Position kangaroo*/
+
+.flyingBirds {
+  position: absolute;
+  right: 20%;
+  top: 30%;
+  bottom: 200px;
+  transition: 0.5s;
+  animation-name: birdsFly;
+  animation-duration: 50s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+}
+@keyframes birdsFly {
+  0% {
+    right: 0.9%;
+  }
+  80% {
+    transform: rotate(0);
+  }
+
+  90% {
+    transform: rotate(-10deg);
+  }
+
+  100% {
+    right: 99%;
+  }
+}
+/*Position gif birds and makes the animation fly forwards*/
+
+.ant {
+  position: absolute;
+  right: 99%;
+  top: 93%;
+  bottom: 200px;
+  transition: 0.5s;
+  animation-name: antCrawling;
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+}
+@keyframes antCrawling {
+  0% {
+    right: 99%;
+  }
+  80% {
+    transform: rotate(0);
+  }
+
+  90% {
+    transform: rotate(-10deg);
+  }
+
+  100% {
+    right: 0.9%;
+  }
+}
+/*Position gif ant and makes the animation move forwards*/
+
+.food {
+  position: fixed;
+  top: 34.5%;
+  left: 80%;
+  width: 300px;
+  height: 550px;
+  display: flex;
+  justify-content: center;
+}
+.food:before {
+  position: fixed;
+  right: 20%;
+  top: 38%;
+  content: attr(data-hover);
+  visibility: hidden;
+  width: 300px;
+  background-color: rgb(236, 245, 227);
+  color: rgb(0, 0, 0);
+  text-align: center;
+  border-radius: 3px;
+  padding: 50px 50px;
+  transition: opacity 0.5s;
+  border-radius: 10px;
+  border: 3px solid rgb(17, 62, 23);
+}
+
+.food:hover:before {
+  opacity: 1;
+  visibility: visible;
+}
+
+/*Position foodplant and makes a textbox appear when hovered*/
+
+.kangarooFacts {
+  position: absolute;
+  left: 40%;
+  top: 30%;
+}
+
+.kangarooFacts:before {
+  position: fixed;
+  right: 20%;
+  top: 38%;
+  content: attr(data-hover);
+  visibility: hidden;
+  width: 600px;
+  background-color: rgb(255, 245, 245);
+  color: rgb(0, 0, 0);
+  text-align: center;
+  border-radius: 3px;
+  padding: 50px 50px;
+  transition: opacity 0.5s;
+  border-radius: 10px;
+  border: 3px solid rgb(170, 0, 0);
+}
+
+.kangarooFacts:hover:before {
+  opacity: 1;
+  visibility: visible;
+}
+
+.kangarooFacts {
+  position: absolute;
+  right: 70%;
+  top: 45%;
+  bottom: 200px;
+}
+
+.kangaroo {
+  position: fixed;
+  right: 60%;
+  top: 65%;
+  bottom: 200px;
+  width: 300px;
+  height: 290px;
+  display: flex;
+  justify-content: center;
+}
+/*Position kangaroo and makes a textbox appear when hovered*/
+
+.kangarooMom {
+  position: fixed;
+  top: 65%;
+  left: 40%;
+  width: 200px;
+  height: 300px;
+  justify-content: center;
+}
+.kangarooMom:before {
+  position: fixed;
+  right: 20%;
+  top: 30%;
+  content: attr(data-hover);
+  visibility: hidden;
+  z-index: 5;
+  width: 800px;
+  background-color: rgb(255, 248, 233);
+  color: rgb(0, 0, 0);
+  text-align: center;
+  border-radius: 3px;
+  padding: 50px 50px;
+  transition: opacity 0.5s;
+  border-radius: 10px;
+  border: 3px solid rgb(221, 173, 77);
+}
+
+.kangarooMom:hover:before {
+  opacity: 1;
+  visibility: visible;
+}
+/*Position kangaroo mom and makes a textbox appear when hovered*/
+
+.text {
+  color: white;
+  position: fixed;
+  top: 90%;
+  right: 85%;
+}
+/*Text for instruction "click on me to go back"*/

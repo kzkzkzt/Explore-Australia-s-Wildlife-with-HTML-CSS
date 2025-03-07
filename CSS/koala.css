@@ -1,0 +1,236 @@
+@font-face {
+  font-family: McLaren;
+  src: url("../fonts/McLaren/McLaren-Regular.ttf");
+}
+
+/*background image*/
+body {
+  position: relative;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-image: url(../images/koala/background.jpeg);
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/*header*/
+h1 {
+  font-family: "McLaren";
+  position: relative;
+  left: 900px;
+  top: 100px;
+  font-weight: bold;
+  font-size: 70px;
+  color: rgb(227, 176, 117);
+}
+
+/*button back to index page*/
+.button1 {
+  background-color: rgb(174, 134, 89);
+  color: #fff;
+  position: relative;
+  top: 700px;
+  left: 50px;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-family: sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+}
+.button1:hover {
+  background-color: rgb(171, 115, 50);
+}
+/* Koala in the left tree*/
+.koalaLeftTree {
+  position: absolute;
+  height: 100px;
+  top: 190px;
+  left: 200px;
+  transform: rotateY(180deg);
+}
+
+/* Koala in the top of the left tree*/
+.koalaStone {
+  position: absolute;
+  height: 100px;
+  top: 15px;
+  left: 150px;
+}
+
+/* The mother koala*/
+.motherKoala {
+  position: absolute;
+  height: 150px;
+  top: 500px;
+  left: 500px;
+  animation: bounce 3s;
+  animation-direction: alternate;
+  animation-timing-function: cubic-bezier(0.95, 0.01, 0.63, 0.77);
+  animation-iteration-count: infinite;
+}
+
+@keyframes bounce {
+  from {
+    top: 500px;
+  }
+
+  to {
+    top: 700px;
+  }
+}
+
+/* Fish in the water*/
+.fish {
+  position: absolute;
+  height: 10px;
+  top: 900px;
+  left: 900px;
+  animation-name: fish;
+  animation-duration: 20s;
+  animation-iteration-count: 1;
+  animation-direction: reverse;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fish {
+  0% {
+    left: 500px;
+    top: 900px;
+  }
+
+  100% {
+    left: 900px;
+    bottom: 900px;
+  }
+}
+
+/* Spider in the tree*/
+.spider {
+  position: absolute;
+  height: 30px;
+  top: 70px;
+  left: 1700px;
+  animation-name: spider;
+  animation-duration: 3s;
+  animation-iteration-count: 4;
+  animation-timing-function: linear;
+}
+
+@keyframes spider {
+  0% {
+    top: 90px;
+  }
+  50% {
+    top: 150px;
+  }
+  75% {
+    top: 150px;
+  }
+
+  100% {
+    top: 90px;
+  }
+}
+
+/*POP UP TEXT*/
+/* button to open text*/
+.open {
+  background-color: rgb(227, 176, 117);
+  font-size: medium;
+  font-family: sans-serif;
+  padding: 15px;
+  color: #fff;
+  border: none;
+  border-radius: 15px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 1s ease-out;
+}
+
+.open:hover {
+  background: rgb(171, 115, 50);
+}
+
+/*Box hidden and visible when clicked*/
+.cover {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 700ms;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.cover:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+/*popup box*/
+.popup {
+  margin: 50px auto;
+  padding: 15px;
+  background: #fff;
+  border-radius: 10px;
+  width: 40%;
+  position: relative;
+  transition: all 0.1s ease-in-out;
+}
+
+/*header for text*/
+.popup h2 {
+  margin-top: 0;
+  color: rgb(25, 23, 23);
+  font-family: sans-serif;
+}
+
+/*close x popup*/
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  transition: all 750ms;
+  font-size: 20px;
+  font-weight: bolder;
+  text-decoration: none;
+  color: rgb(25, 23, 23);
+}
+
+.popup .close:hover {
+  color: rgb(171, 115, 50);
+}
+
+/*placement of clickboxes*/
+#placement1 {
+  position: absolute;
+  top: 200px;
+  left: 400px;
+}
+
+#placement2 {
+  position: absolute;
+  top: 600px;
+  left: 400px;
+}
+
+#placement3 {
+  position: absolute;
+  top: 600px;
+  left: 1300px;
+}
+
+#placement4 {
+  position: absolute;
+  top: 300px;
+  left: 1300px;
+}

@@ -1,0 +1,624 @@
+/* Font styles */
+@font-face {
+  font-family: McLaren;
+  src: url("../fonts/McLaren/McLaren-Regular.ttf") format("truetype");
+}
+
+/* Background */
+body,
+html {
+  position: relative;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-image: url("../images/sugarglider/forest.jpg");
+  background-size: cover;
+}
+
+/* Text styles */
+* {
+  font-family: "McLaren", sans-serif;
+}
+
+h2 {
+  margin: 0;
+  font-size: 5vh;
+  color: rgb(16, 64, 7);
+  text-transform: uppercase;
+}
+
+p {
+  margin: 0;
+  font-size: 2.5vh;
+}
+
+/* Button effects */
+.expand img:hover {
+  transform: scale(1.2);
+  transition: 1s ease;
+}
+
+.shake img:hover {
+  animation: shake 0.4s;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+
+/* Title & button to index page */
+.title {
+  position: absolute;
+  top: 14vh;
+  right: 36vw;
+}
+
+.title span {
+  justify-content: center;
+  display: inline-block;
+  font-size: 6vh;
+  font-weight: bolder;
+  color: rgb(11, 34, 7);
+  text-transform: lowercase;
+  text-shadow: 2px 0 rgb(255, 255, 255);
+  animation: turn 6s infinite;
+  animation-delay: calc(0.55s * var(--i));
+}
+
+@keyframes turn {
+  0%,
+  90% {
+    transform: rotateY(360deg);
+  }
+}
+
+/* Birds nest */
+#birdsNest img {
+  position: absolute;
+  width: 15vh;
+  top: 6vh;
+  left: 36vw;
+}
+
+/* Owl */
+#owl img {
+  position: absolute;
+  width: 20vh;
+  top: 28vh;
+  left: 26.6vw;
+}
+
+/* Snake */
+#snake img {
+  position: absolute;
+  width: 15vh;
+  top: 22vh;
+  right: 18vw;
+}
+
+/* Cat lurking behind rock */
+#cat img {
+  position: absolute;
+  width: 10vh;
+  left: 27vh;
+  top: 27vw;
+  animation: spying 20s infinite;
+  transition-timing-function: ease-in;
+}
+
+@keyframes spying {
+  0% {
+    top: 28vw;
+  }
+  98% {
+    top: 25vw;
+  }
+  99% {
+    top: 23vw;
+  }
+  100% {
+    top: 28vw;
+  }
+}
+
+/* Rocks */
+#littleRock img {
+  position: fixed;
+  width: 30vh;
+  bottom: 31vh;
+  left: 10vw;
+  transform: rotate(18deg);
+}
+
+#bigRock img {
+  position: absolute;
+  width: 90vh;
+  bottom: 21vh;
+  right: 10vw;
+  transform: rotate(-5deg);
+}
+
+/* Start of sugar glider family */
+/* Sugar glider father */
+#sgFather img {
+  position: absolute;
+  width: 16vh;
+  bottom: 38vh;
+  right: 40vw;
+}
+
+/* Sugar glider baby */
+#sgBaby img {
+  position: absolute;
+  width: 15vh;
+  bottom: 35vh;
+  right: 27vw;
+}
+
+/* Sugar glider mother */
+#sgMother img {
+  position: absolute;
+  width: 15vh;
+  bottom: 34vh;
+  right: 13vw;
+}
+/* End of sugar glider family */
+
+/* Sugar glider climbing tree */
+#sgClimbing img {
+  position: absolute;
+  width: 8vh;
+  right: 1vw;
+  animation: climb 8s infinite;
+  animation-timing-function: ease-out;
+}
+
+@keyframes climb {
+  0% {
+    bottom: 20vh;
+    transform: rotate(5deg);
+  }
+  2.5% {
+    transform: rotate(-5deg);
+  }
+  5% {
+    transform: rotate(5deg);
+  }
+  7.5% {
+    transform: rotate(-5deg);
+  }
+  10% {
+    transform: rotate(5deg);
+  }
+  12.5% {
+    transform: rotate(-5deg);
+  }
+  15% {
+    transform: rotate(5deg);
+  }
+  17.5% {
+    transform: rotate(-5deg);
+  }
+  20% {
+    transform: rotate(5deg);
+  }
+  22.5% {
+    transform: rotate(-5deg);
+  }
+  25% {
+    transform: rotate(5deg);
+  }
+  27.5% {
+    transform: rotate(-5deg);
+  }
+  30% {
+    transform: rotate(5deg);
+  }
+  32.5% {
+    transform: rotate(-5deg);
+  }
+  35% {
+    transform: rotate(5deg);
+  }
+  37.5% {
+    transform: rotate(-5deg);
+  }
+  40% {
+    transform: rotate(5deg);
+  }
+  42.5% {
+    transform: rotate(-5deg);
+  }
+  45% {
+    transform: rotate(5deg);
+  }
+  47.5% {
+    transform: rotate(-5deg);
+  }
+  50% {
+    transform: rotate(5deg);
+    bottom: 64vh;
+  }
+  52.5% {
+    transform: rotate(-5deg);
+  }
+  55% {
+    transform: rotate(5deg);
+  }
+  57.5% {
+    transform: rotate(-5deg);
+  }
+  60% {
+    transform: rotate(5deg);
+  }
+  62.5% {
+    transform: rotate(-5deg);
+  }
+  65% {
+    transform: rotate(5deg);
+  }
+  67.5% {
+    transform: rotate(-5deg);
+  }
+  70% {
+    transform: rotate(5deg);
+  }
+  72.5% {
+    transform: rotate(-5deg);
+  }
+  75% {
+    transform: rotate(5deg);
+  }
+  77.5% {
+    transform: rotate(-5deg);
+  }
+  80% {
+    transform: rotate(5deg);
+  }
+  82.5% {
+    transform: rotate(-5deg);
+  }
+  85% {
+    transform: rotate(5deg);
+  }
+  87.5% {
+    transform: rotate(-5deg);
+  }
+  90% {
+    transform: rotate(5deg);
+  }
+  92.5% {
+    transform: rotate(-5deg);
+  }
+  95% {
+    transform: rotate(5deg);
+  }
+  97.5% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(5deg);
+    bottom: 20vh;
+  }
+}
+
+/* Sugar glider sitting watching ants */
+#sgSitting img {
+  position: absolute;
+  width: 20vh;
+  bottom: 21vh;
+  left: 9vw;
+}
+
+/* Nuts */
+#nuts img {
+  position: absolute;
+  width: 8vh;
+  bottom: 24vh;
+  right: 36vw;
+}
+
+/* Flowers */
+#flowers img {
+  position: fixed;
+  width: 35vh;
+  bottom: -9vh;
+  right: 36vw;
+}
+
+/* Tree fruits */
+#fruits img {
+  position: absolute;
+  width: 10vh;
+  top: 5vh;
+  left: 8vw;
+}
+
+/* Ants */
+#antUp img {
+  position: absolute;
+  width: 1vh;
+  left: 4vw;
+  animation: crawlUp 40s infinite;
+}
+
+@keyframes crawlUp {
+  0% {
+    bottom: 23vh;
+  }
+  30% {
+    left: 6vw;
+  }
+  100% {
+    bottom: 80vh;
+    left: 2vw;
+  }
+}
+
+#antDown img {
+  position: absolute;
+  width: 1vh;
+  bottom: 80vh;
+  left: 6vw;
+  animation: crawlDown 35s infinite;
+  animation-delay: 10s;
+}
+
+@keyframes crawlDown {
+  0% {
+    bottom: 80vh;
+  }
+  50% {
+    left: 7vw;
+  }
+  100% {
+    bottom: 27vh;
+  }
+}
+
+/* Start of Mutual code for all boxes */
+/* Popup container box */
+.infoBoxLayout {
+  position: absolute;
+  display: block;
+  padding: 3vh;
+  line-height: 1.5;
+  top: 50vh;
+  left: 50vw;
+  transform: translateX(-50%) translateY(-50%);
+  box-shadow: 10px rgba(0, 0, 0, 0.2);
+  background: rgb(255, 255, 255);
+}
+
+/* The big closing background area */
+a.close {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgb(0, 0, 0);
+  opacity: 0.7;
+  transition: opacity 400ms;
+}
+
+a.close:hover {
+  opacity: 0.2;
+}
+/* End of mutual code for all boxes */
+
+/* Start of Individual code for all boxes */
+/* Habitat */
+#infoBoxHabitat {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 200ms;
+  z-index: 1;
+}
+
+#infoBoxHabitat:target {
+  pointer-events: all;
+  opacity: 90%;
+}
+
+/* Conservation */
+#infoBoxConservation {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 200ms;
+  z-index: 1;
+}
+
+#infoBoxConservation:target {
+  pointer-events: all;
+  opacity: 90%;
+}
+
+/* Torpor */
+#infoBoxTorpor {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 200ms;
+  z-index: 1;
+}
+
+#infoBoxTorpor:target {
+  pointer-events: all;
+  opacity: 90%;
+}
+
+/* General Facts */
+#infoBoxGF {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 00ms;
+  z-index: 1;
+}
+
+#infoBoxGF:target {
+  pointer-events: all;
+  opacity: 90%;
+}
+
+/* Diet */
+#infoBoxDiet {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 200ms;
+  z-index: 1;
+}
+
+#infoBoxDiet:target {
+  pointer-events: all;
+  opacity: 90%;
+}
+
+/* Images */
+/* Birds nest */
+#infoBoxBirdsNest {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 200ms;
+  z-index: 1;
+}
+
+#infoBoxBirdsNest:target {
+  pointer-events: all;
+  opacity: 100%;
+}
+
+/* Owl */
+#infoBoxOwl {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 200ms;
+  z-index: 1;
+}
+
+#infoBoxOwl:target {
+  pointer-events: all;
+  opacity: 100%;
+}
+
+/* Snake */
+#infoBoxSnake {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 200ms;
+  z-index: 1;
+}
+
+#infoBoxSnake:target {
+  pointer-events: all;
+  opacity: 100%;
+}
+
+/* Nuts */
+#infoBoxNuts {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 200ms;
+  z-index: 1;
+}
+
+#infoBoxNuts:target {
+  pointer-events: all;
+  opacity: 100%;
+}
+
+/* Flowers */
+#infoBoxFlowers {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 200ms;
+  z-index: 1;
+}
+
+#infoBoxFlowers:target {
+  pointer-events: all;
+  opacity: 100%;
+}
+/* End of Individual code for all boxes */
