@@ -2,7 +2,7 @@ Australian Wildlife ExplorerWelcome to the Australian Wildlife Explorer project!
 
 Credits
 
-This project was collaboratively developed by Ingeborg, Stephanie, Sara, and Kent Tupaz. Their combined efforts in design, development, and research brought this interactive wildlife experience to life.
+This project was collaboratively developed by I. Malm, S. Schraml, S. Dahlen, and Kent Tupaz. Their combined efforts in design, development, and research brought this interactive wildlife experience to life.
 
 Table of Contents
 
